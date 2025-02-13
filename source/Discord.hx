@@ -1,7 +1,7 @@
 package;
 
 import Sys.sleep;
-import discord_rpc.DiscordRpc;
+import hxdiscord_rpc.DiscordRpc;
 
 using StringTools;
 
