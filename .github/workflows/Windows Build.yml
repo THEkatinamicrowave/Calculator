@@ -26,7 +26,7 @@ jobs:
           haxelib install flixel
           haxelib install flixel-addons
           haxelib install flixel-ui
-          haxelib install discord_rpc
+          haxelib install hxdiscord_rpc
 
       - name: Build Project
         run: |
