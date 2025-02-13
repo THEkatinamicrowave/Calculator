@@ -1,7 +1,7 @@
 package;
 
 import Sys.sleep;
-import hxdiscord_rpc.DiscordRpc;
+import hxdiscord_rpc.Discord;
 
 using StringTools;
 
@@ -12,7 +12,7 @@ class DiscordClient
 	public function new()
 	{
 		trace("Discord Client starting...");
-		DiscordRpc.start({
+		Discord.start({
 			clientID: "1330513881419747460",
 			onReady: onReady,
 			onError: onError,
@@ -22,22 +22,22 @@ class DiscordClient
 
 		while (true)
 		{
-			DiscordRpc.process();
+			Discord.process();
 			sleep(2);
 			//trace("Discord Client Update");
 		}
 
-		DiscordRpc.shutdown();
+		Discord.shutdown();
 	}
 	
 	public static function shutdown()
 	{
-		DiscordRpc.shutdown();
+		Discord.shutdown();
 	}
 	
 	static function onReady()
 	{
-		DiscordRpc.presence({
+		Discord.presence({
 			details: "Calculator",
 			state: null,
 			largeImageKey: 'icon',
@@ -74,7 +74,7 @@ class DiscordClient
 			endTimestamp = startTimestamp + endTimestamp;
 		}
 
-		DiscordRpc.presence({
+		Discord.presence({
 			details: details,
 			state: state,
 			largeImageKey: 'icon',
