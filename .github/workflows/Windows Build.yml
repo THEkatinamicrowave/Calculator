@@ -30,7 +30,7 @@ jobs:
 
       - name: Build Project
         run: |
-          haxelib run flixel-tools build windows
+          haxelib run lime build windows
 
       - name: Archive built project
         uses: actions/upload-artifact@v4
