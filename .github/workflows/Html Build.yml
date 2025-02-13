@@ -30,7 +30,7 @@ jobs:
 
       - name: Build Project
         run: |
-          haxelib run flixel-tools build html5
+          haxelib run lime build html5
 
       - name: Archive built project
         uses: actions/upload-artifact@v4
